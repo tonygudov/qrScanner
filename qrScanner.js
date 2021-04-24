@@ -2,31 +2,31 @@ const qrScanner = {
 		
   reset () {
 
-  	qrScanner.scanner = null;
-  	qrScanner.canvasElement = null;
-  	qrScanner.cancelElement = null;
-  	qrScanner.progressElement = null;
-  	qrScanner.logElement = null;
-  	qrScanner.video = null;
-  	qrScanner.scanning = false;
-  	qrScanner.exclude = [];
-  	qrScanner.success = function () {};
-  	qrScanner.regex = /.?/;
-  	qrScanner.scanTwise = true;
+		qrScanner.scanner = null;
+		qrScanner.canvasElement = null;
+		qrScanner.cancelElement = null;
+		qrScanner.progressElement = null;
+		qrScanner.logElement = null;
+		qrScanner.video = null;
+		qrScanner.scanning = false;
+		qrScanner.exclude = [];
+		qrScanner.success = function () {};
+		qrScanner.regex = /.?/;
+		qrScanner.scanTwise = true;
 
-	  qrScanner.progress = 0;
+		qrScanner.progress = 0;
   	qrScanner.frames = 0;
   	qrScanner.codeMinFrames = 10;
   	qrScanner.tempCode = null;
   	qrScanner.tempCodeStartFrames = 0;
-	  qrScanner.lastCode = null;
-	  qrScanner.pauseFrames = 0;
-	  qrScanner.frameOffset = 100;
+		qrScanner.lastCode = null;
+		qrScanner.pauseFrames = 0;
+		qrScanner.frameOffset = 100;
 
-	  qrScanner.message = null;
-  	qrScanner.messageElement = null;
-  	qrScanner.messageFrames = 0;
-	  qrScanner.debug = false;
+		qrScanner.message = null;
+		qrScanner.messageElement = null;
+		qrScanner.messageFrames = 0;
+		qrScanner.debug = false;
   },
 
   init ( options ) {
@@ -61,7 +61,7 @@ const qrScanner = {
 				<div class="progress">\
 					<div id="qrScannerProgress" class="progress-bar bg-success"></div>\
 				</div>\
-				<span id="qrScannerCancel" class="btn btn-danger btn-lg">Cancel</span>\
+				<button id="qrScannerCancel">Cancel</button>\
 				<div id="qrScannerGuide"></div>\
 				<div id="qrScannerMessage">Test</div>\
 			</div>' );
